@@ -1,0 +1,41 @@
+# Azure Kubernetes Infrastructure with Terraform
+
+This project demonstrates the design and provisioning of a production-style Azure Kubernetes infrastructure using Infrastructure as Code (IaC).
+
+## Overview
+
+The infrastructure is built using Terraform and follows DevOps best practices, including automated provisioning, version control, and modular design.
+
+It includes:
+- Azure Virtual Network (VNet) and subnets
+- Azure Kubernetes Service (AKS)
+- CI/CD workflow with GitHub Actions
+- Remote state management with Terraform Cloud
+- NGINX Ingress Controller
+- cert-manager for TLS/SSL certificate management
+
+## Architecture
+
+The diagram below shows the high-level architecture of the infrastructure.
+
+![Architecture Diagram](azure-archi.png)
+
+## Tools & Technologies
+
+- Azure
+- Terraform
+- Terraform Cloud
+- GitHub Actions
+- Kubernetes (AKS)
+- Helm
+- NGINX Ingress
+- cert-manager
+
+## Project Status
+
+🚧 Infrastructure setup completed.  
+➡️ Application deployment (three-tier architecture) coming next.
+
+## Notes
+
+This project is part of my learning journey in cloud computing and DevOps engineering, focusing on real-world infrastructure design and automation.
