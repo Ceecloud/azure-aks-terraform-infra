@@ -25,7 +25,7 @@ resource "azurerm_kubernetes_cluster" "this" {
   resource_group_name = azurerm_resource_group.this.name
   dns_prefix          = "devaks1"
 
-  kubernetes_version      = local.eks_version
+
   private_cluster_enabled = false
   node_resource_group     = "${local.resource_group_name}-${local.env}-${local.eks_name}"
 
@@ -42,12 +42,11 @@ resource "azurerm_kubernetes_cluster" "this" {
   }
 
   default_node_pool {
-    name                 = "general"
-    vm_size              = "Standard_D2_v2"
-    vnet_subnet_id       = azurerm_subnet.subnet1.id
-    orchestrator_version = local.eks_version
-    type                 = "VirtualMachineScaleSets"
-    node_count           = 1
+    name           = "general"
+    vm_size        = "Standard_D2_v2"
+    vnet_subnet_id = azurerm_subnet.subnet1.id
+    type           = "VirtualMachineScaleSets"
+    node_count     = 1
 
     node_labels = {
       role = "general"
